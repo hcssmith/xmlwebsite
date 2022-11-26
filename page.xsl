@@ -43,9 +43,22 @@
               <xsl:when test="name() = 'image'">
                 <img src="{@url}" />
               </xsl:when>
+              <xsl:when test="name() = 'blogentries'">
+                <xsl:for-each select="entry">
+                  <article>
+                    <header>
+                      <h2><xsl:value-of select="title" /></h2>
+                      <p><xsl:value-of select="date" /></p>
+                    </header>
+                    <p><xsl:value-of select="desc" /></p>
+                    <a href="{link}" >read more</a>
+                    <img />
+                  </article>
+                </xsl:for-each>
+              </xsl:when>
             </xsl:choose>
           </xsl:for-each>
-          -----------------------------------------------------
+          --------------------------------------------------------------
           <xsl:for-each select ="//footnote">
             <p><span><sup><a id="{@id}"><xsl:value-of select="@id" />: </a></sup></span><xsl:value-of select="@description" /></p>
           </xsl:for-each>

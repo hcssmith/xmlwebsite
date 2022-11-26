@@ -1,0 +1,26 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="blogentries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="entry" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="entry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title"/>
+        <xs:element ref="date"/>
+        <xs:element ref="link"/>
+        <xs:element ref="desc"/>
+        <xs:element ref="thumb"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="title" type="xs:string" />
+  <xs:element name="date" type="xs:string" />
+  <xs:element name="link" type="xs:string" />
+  <xs:element name="desc" type="xs:string" />
+  <xs:element name="thumb" type="xs:string" />
+
+</xs:schema>

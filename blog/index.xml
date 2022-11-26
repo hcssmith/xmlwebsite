@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../page.xsl"?>
+
+<page title="hcssmith.com" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="../page.xsd">
+  <includes>
+    <include type="css" url="/awsm.min.css" />
+  </includes>
+  <content>
+    <menu>
+      <menuitem type="link" destination="/" text="Home"/>
+      <menuitem type="link" destination="/blog" text="Blog"/>
+      <menuitem type="link" destination="/git" text="Git"/>
+      <menuitem type="link" destination="/contact" text="Contact"/>
+    </menu>
+    <body>
+      <body_title>Blog</body_title>
+      <subtitle>A collection of notes on various topics.</subtitle>
+      <text>
+        <image url="https://picsum.photos/seed/picsum/850/300" />
+        <blogentries>
+          <entry>
+            <title>Notes on xslt</title>
+            <date>2022-11-26</date>
+            <link>20221126.xml</link>
+            <desc>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</desc>
+            <thumb></thumb>
+          </entry>
+          <entry>
+            <title>Notes on odin</title>
+            <date>2022-11-27</date>
+            <link>20221127.xml</link>
+            <desc>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</desc>
+            <thumb></thumb>
+          </entry>
+        </blogentries>
+      </text>
+    </body>
+  </content>
+</page>
