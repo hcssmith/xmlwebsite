@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="page.xsl"?>
+
+<page title="hcssmith.com" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="./page.xsd">
+  <includes>
+    <include type="css" url="awsm.min.css" />
+  </includes>
+  <content>
+    <menu>
+      <menuitem type="link" destination="/" text="Home"/>
+      <menuitem type="link" destination="/blog" text="Blog"/>
+      <menuitem type="link" destination="/git" text="Git"/>
+      <menuitem type="link" destination="/contact" text="Contact"/>
+    </menu>
+    <body>
+      <subtitle>A repository for any projects and notes on technologies that I create</subtitle>
+      <text>
+        <image url="https://picsum.photos/seed/picsum/850/300" />
+        <para>
+          This site is build using XML and XSLT as an expermient. It is inteneded to have the xml files built by combining
+          various differnet files at request time. I will be looking into some form of caching to only regen if the input 
+          files are editied. and have things like includes (css) and menu (navbar) are definied in seaprate file. 
+        </para>
+      </text>
+    </body>
+  </content>
+</page>
