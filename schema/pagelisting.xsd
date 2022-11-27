@@ -1,5 +1,5 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="blogentries">
+  <xs:element name="pagelisting">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="entry" maxOccurs="unbounded" minOccurs="0"/>

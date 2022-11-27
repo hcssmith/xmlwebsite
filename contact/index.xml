@@ -11,23 +11,18 @@
     <menu>
       <menuitem type="link" destination="/" text="Home"/>
       <menuitem type="link" destination="/blog" text="Blog"/>
-      <menuitem type="link" destination="/git" text="Git"/>
+      <menuitem type="link" destination="/projects" text="Projects"/>
+      <menuitem type="link" destination="https://github.com/hcssmith" text="Git"/>
       <menuitem type="link" destination="/contact" text="Contact"/>
     </menu>
     <body>
-      <body_title>Blog</body_title>
-      <subtitle>A collection of notes on various topics.</subtitle>
+      <subtitle>Contact Me</subtitle>
       <text>
-        <image url="https://picsum.photos/seed/picsum/850/300" />
-        <pagelisting>
-          <entry>
-            <title>Notes on xslt</title>
-            <date>2022-11-26</date>
-            <link>20221126.xml</link>
-            <desc>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</desc>
-            <thumb></thumb>
-          </entry>
-        </pagelisting>
+        <contact>
+          <name>Hallam Smith</name>
+          <email>contact@hcssmith.com</email>
+          <pgp>A PUBLIC KEY</pgp>
+        </contact>
       </text>
     </body>
   </content>

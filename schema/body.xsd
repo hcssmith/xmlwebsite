@@ -1,5 +1,6 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:include schemaLocation="./blog.xsd" />
+  <xs:include schemaLocation="./pagelisting.xsd" />
+  <xs:include schemaLocation="./contact.xsd" />
   <xs:element name="body_title" type="xs:string" />
   <xs:element name="subtitle" type="xs:string" />
   <xs:element name="body">
@@ -14,7 +15,8 @@
   <xs:element name="text">
     <xs:complexType>
       <xs:choice maxOccurs="unbounded">
-        <xs:element ref="blogentries" />
+        <xs:element ref="pagelisting" />
+        <xs:element ref="contact" />
         <xs:sequence>
           <xs:element ref="para" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element ref="image" minOccurs="0" maxOccurs="unbounded"/>

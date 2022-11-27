@@ -43,7 +43,7 @@
               <xsl:when test="name() = 'image'">
                 <img src="{@url}" />
               </xsl:when>
-              <xsl:when test="name() = 'blogentries'">
+              <xsl:when test="name() = 'pagelisting'">
                 <xsl:for-each select="entry">
                   <article>
                     <header>
@@ -56,12 +56,20 @@
                   </article>
                 </xsl:for-each>
               </xsl:when>
+              <xsl:when test="name() = 'contact'">
+          --------------------------------------------------------------
+                <h4><xsl:value-of select="name"/></h4>
+                <h4><xsl:value-of select="email"/></h4>
+                <h4><xsl:value-of select="pgp"/></h4>
+              </xsl:when>
             </xsl:choose>
           </xsl:for-each>
+          <xsl:if test="//footnote">
           --------------------------------------------------------------
           <xsl:for-each select ="//footnote">
             <p><span><sup><a id="{@id}"><xsl:value-of select="@id" />: </a></sup></span><xsl:value-of select="@description" /></p>
           </xsl:for-each>
+          </xsl:if>
         </main>
       </body>
     </html>
