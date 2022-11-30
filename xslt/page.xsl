@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="html" />
-  <xsl:template match="footnote">
+<xsl:output 
+  method="xml" 
+  omit-xml-declaration="no"
+  doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" 
+  doctype-public="-//W3C//DTD XHTML 1.1//EN"
+  indent="yes"
+  />
+ <!--<xsl:output method="html" />-->
+ <xsl:template match="footnote" xmlns="http://www.w3.org/1999/xhtml">
     <sup><a href="#{@id}"><xsl:value-of select="@id" /></a></sup>
   </xsl:template>
   <xsl:template match="/">
-    <html>
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
       <head>
+        <title><xsl:value-of select="page/@title" /></title>
         <xsl:for-each select="page/includes/include">
           <xsl:choose>
             <xsl:when test="@type='css'">
@@ -67,7 +75,7 @@
           <xsl:if test="//footnote">
           --------------------------------------------------------------
           <xsl:for-each select ="//footnote">
-            <p><span><sup><a id="{@id}"><xsl:value-of select="@id" />: </a></sup></span><xsl:value-of select="@description" /></p>
+            <p><span><a id="{@id}"><xsl:value-of select="@id" /></a>: </span><xsl:value-of select="@description" /></p>
           </xsl:for-each>
           </xsl:if>
         </main>

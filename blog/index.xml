@@ -11,7 +11,8 @@
     <menu>
       <menuitem type="link" destination="/" text="Home"/>
       <menuitem type="link" destination="/blog" text="Blog"/>
-      <menuitem type="link" destination="/git" text="Git"/>
+      <menuitem type="link" destination="/projects" text="Projects"/>
+      <menuitem type="link" destination="https://github.com/hcssmith" text="Git"/>
       <menuitem type="link" destination="/contact" text="Contact"/>
     </menu>
     <body>
